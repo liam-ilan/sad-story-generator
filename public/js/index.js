@@ -7,7 +7,6 @@ const name = document.getElementById('name')
 
 // event listener
 submit.addEventListener('click', async function () {
-
   // prep data
   const data = {
     text: text.value,
