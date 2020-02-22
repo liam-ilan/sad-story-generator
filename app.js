@@ -31,8 +31,13 @@ MongoClient.connect(mongoURI, mongoOptions, (err, client) => {
   app.listen(port)
 })
 
-// make a new game
-app.post('/upload', function (req, res) {
+// main path
+app.get('/', (req, res) => {
+  res.sendFile(`${__dirname}/public/homepage/index.html`)
+})
+
+// upload story
+app.post('/api/upload', function (req, res) {
   const story = req.body
 
   // add story to the database
@@ -43,4 +48,16 @@ app.post('/upload', function (req, res) {
 
   // return status
   res.json({ status: 'success' })
+})
+
+// get stories
+app.get('/api/stories', function (req, res) {
+  // get stories
+  db.collection('stories').distinct('text', {}, function (err, result) {
+    // handle error
+    if (err) return res.json({ fail: 'database error' })
+
+    // return story
+    res.json(result)
+  })
 })

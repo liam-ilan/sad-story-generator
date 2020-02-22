@@ -14,7 +14,7 @@ submit.addEventListener('click', async function () {
   }
 
   // request
-  await reqJson('/upload', 'POST', data)
+  await reqJson('/api/upload', 'POST', data)
 
   // tell user the text was received
   submit.innerHTML = 'Submitted'
