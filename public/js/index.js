@@ -1,6 +1,6 @@
 /* global reqJson */
 
-// consts
+// elements
 const submit = document.getElementById('submit')
 const text = document.getElementById('text')
 const name = document.getElementById('name')
@@ -14,5 +14,12 @@ submit.addEventListener('click', async function () {
   }
 
   // request
-  console.log(await reqJson('/upload', 'POST', data))
+  await reqJson('/upload', 'POST', data)
+
+  // tell user the text was received
+  submit.innerHTML = 'Submitted'
+  setTimeout(() => { submit.innerHTML = 'Submit' }, 3000)
+
+  // clear text
+  text.value = ''
 })
