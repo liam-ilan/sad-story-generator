@@ -49,15 +49,3 @@ app.post('/api/upload', function (req, res) {
   // return status
   res.json({ status: 'success' })
 })
-
-// get stories
-app.get('/api/stories', function (req, res) {
-  // get stories
-  db.collection('stories').distinct('text', {}, function (err, result) {
-    // handle error
-    if (err) return res.json({ fail: 'database error' })
-
-    // return story
-    res.json(result)
-  })
-})
