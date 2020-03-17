@@ -7,10 +7,20 @@ A set of tools used to build a text generation. This includes a sever-side appli
 Note that this is not only limited to "sad stories". That comes from my group, again.
 
 ### How to use?
-1. Clone this repo: `git clone https://github.com/liam-ilan/sad-story-generator.git`
-2. Init NPM: `npm init`
-3. To start the server (for getting text), run: `npm start`
-4. For linting, run: `npm run lint`
+
+#### Getting Started
+- Clone this repo: `git clone https://github.com/liam-ilan/sad-story-generator.git`
+- Init NPM: `npm init`
+
+#### Server
+- To start the server (for getting text), run: `npm start`
+
+#### Development
+- For linting, run: `npm run lint`
+
+#### Generation (WIP)
+- Run `/generators/getstroies.js` to create a database dump for the generators (data.json).
+- Run any other file in `/generators` to generate stories
 
 ### Credit
 All software written by [Liam Ilan](https://liamilan.surge.sh)
