@@ -12,7 +12,6 @@ let db
 
 // connect
 MongoClient.connect(mongoURI, mongoOptions, (err, client) => {
-
   // handle errors
   if (err) return console.log({ fail: 'database error' })
 
@@ -22,9 +21,8 @@ MongoClient.connect(mongoURI, mongoOptions, (err, client) => {
 
   // get stories
   db.collection('stories').distinct('text', {}, function (err, result) {
-
     // handle error
-    if (err) return res.json({ fail: 'database error' })
+    if (err) return { fail: 'database error' }
 
     // write to file data
     fs.writeFile('generators/data.json', JSON.stringify(result), function (err) {
@@ -33,5 +31,3 @@ MongoClient.connect(mongoURI, mongoOptions, (err, client) => {
     })
   })
 })
-
-
