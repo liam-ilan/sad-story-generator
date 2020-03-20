@@ -2,7 +2,7 @@
 ## A school project (Also known as the HAUK project because of my group)
 
 ### What is this?
-A set of tools used to build a text generation. This includes a sever-side application, and interface to get text from the public, as well as the text generation software itself (WIP).
+A set of tools used to build a text generation. This includes a sever-side application, and interface to get text from the public, as well as the text generation software itself.
 
 Note that this is not only limited to "sad stories". That comes from my group, again.
 
@@ -19,7 +19,7 @@ Note that this is not only limited to "sad stories". That comes from my group, a
 #### Development
 - For linting, run: `npm run lint`
 
-#### Generation (WIP)
+#### Generation
 - Run `node /generators/getstroies.js` to create a database dump for the generators (data.json)
 - Run any other file in `/generators` to generate stories
 
