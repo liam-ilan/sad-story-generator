@@ -29,23 +29,8 @@ a:hover {
   padding: 20px;
 }
 
-#name {
-  font-family: "Courier New", Courier, monospace;
+#output {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  margin-bottom: 10px;
-  font-size: 30px;
-  border: 10px solid #285943;
-  padding: 5px;
-  background-color: #AAFCB8;
-}
-
-#text {
-  font-family: "Courier New", Courier, monospace;
-  display: block;
-  resize: none;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
@@ -55,13 +40,35 @@ a:hover {
   border: 10px solid #285943;
   padding: 5px;
   background-color: #AAFCB8;
+  overflow-y: scroll;
 }
 
-#submit {
+#options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.option:hover {
+  color: #77AF9C;
+}
+
+.active {
+  color: #77AF9C
+}
+
+.passive {
+  color: black;
+}
+
+#button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10vw;
+  margin: 20px auto;
+  width: 15vw;
   text-align: center;
   margin-bottom: 10px;
   font-size: 20px;
@@ -71,6 +78,6 @@ a:hover {
   padding: 2px;
 }
 
-#submit:hover {
+#button:hover {
   background-color: #77AF9C;
 }
