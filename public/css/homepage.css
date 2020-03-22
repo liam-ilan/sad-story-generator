@@ -1,56 +1,41 @@
 body {
   margin: 0;
+  background-color: #D7FFF1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #285943;
 }
 
 #title {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
   padding: 20px;
-  background-color: #eee;
-  margin-bottom: 20px;
+  background-color: #285943;
+  color: white;
 }
 
-#name {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  margin-bottom: 10px;
+#links {
+  text-align: center;
+  font-size: 25px;
+  background-color: #77AF9C;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#about {
+  text-align: center;
   font-size: 30px;
-  border: 1px solid black;
-  padding: 5px;
+  margin-bottom: 10px;
 }
 
 #text {
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  resize: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  height: 300px;
-  margin-bottom: 10px;
-  font-size: 30px;
-  border: 1px solid black;
-  padding: 5px;
-}
-
-#submit {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #eee;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 2px;
-}
-
-#submit:active {
-  background-color: #ccc;
+  padding: 0px 100px;
+  font-size: 25px;
 }

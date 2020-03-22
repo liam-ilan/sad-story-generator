@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: #D7FFF1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #285943;
+}
+
+#title {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #285943;
+  color: white;
+}
+
+#links {
+  text-align: center;
+  font-size: 25px;
+  background-color: #77AF9C;
+  color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#name {
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border: 10px solid #285943;
+  padding: 5px;
+  background-color: #AAFCB8;
+}
+
+#text {
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  resize: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 300px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border: 10px solid #285943;
+  padding: 5px;
+  background-color: #AAFCB8;
+}
+
+#submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10vw;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: #285943;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+#submit:active {
+  background-color: #ccc;
+}
