@@ -4,6 +4,12 @@ const bodyParser = require('body-parser')
 const Mongo = require('mongodb')
 require('dotenv').config()
 
+// generators
+const generators = {
+  orderone: require('./generators/orderone.js'),
+  ordertwo: require('./generators/ordertwo.js')
+}
+
 // mongoDB
 const MongoClient = Mongo.MongoClient
 const mongoURI = process.env.MONGODB_URI
@@ -48,4 +54,18 @@ app.post('/api/upload', function (req, res) {
 
   // return status
   res.json({ status: 'success' })
+})
+
+// generate story
+app.get('/api/generate/:type', function (req, res) {
+  // get type
+  const { type } = req.params
+
+  // Check if type matches generator (done with loop and not direct access for security)
+  Object.keys(generators).forEach((generator) => {
+    if (generator === type) {
+      // return story object
+      res.json({ story: generators[generator]() })
+    }
+  })
 })

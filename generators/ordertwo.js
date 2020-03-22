@@ -59,5 +59,10 @@ function generateStory (state = `. ${firstWords[Math.floor(Math.random() * first
   return (state + ' ' + generateStory(nextState)).split(' ').slice(1).join(' ').split(' .').join('.')
 }
 
-const story = generateStory()
-console.log(story)
+// export
+if (require.main === module) {
+  const story = generateStory()
+  console.log(story)
+} else {
+  module.exports = generateStory
+}

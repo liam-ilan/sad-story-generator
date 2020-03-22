@@ -55,5 +55,10 @@ function generateStory (word = '.', sentenceCount = 5) {
   return (nextWord + ' ' + generateStory(nextWord, nextWord === '.' ? sentenceCount - 1 : sentenceCount)).split(' .').join('.')
 }
 
-const story = generateStory()
-console.log(story)
+// export
+if (require.main === module) {
+  const story = generateStory()
+  console.log(story)
+} else {
+  module.exports = generateStory
+}
