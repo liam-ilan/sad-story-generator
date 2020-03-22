@@ -46,15 +46,14 @@ function generateStory (word = '.', sentenceCount = 5) {
   // pick random nextWord
   const nextWord = nextWords[Math.floor(Math.random() * nextWords.length)]
 
-  // if the next word EOS, then return nothing
+  // if finished scentence count limit, return nothing
   if (sentenceCount === 0) {
     return ''
   }
 
-  // genreate more of the story
+  // generate more of the story
   return (nextWord + ' ' + generateStory(nextWord, nextWord === '.' ? sentenceCount - 1 : sentenceCount)).split(' .').join('.')
 }
 
-// clean up dots
 const story = generateStory()
 console.log(story)
