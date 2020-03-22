@@ -21,7 +21,7 @@ Note that this is not only limited to "sad stories". That comes from my group, a
 
 #### Generation
 - Run `node /generators/getstroies.js` to create a database dump for the generators (data.json)
-- Run any other file in `/generators` to generate stories
+- Run any other file in `/generators` to generate stories (eg. `node ordertwo.js`)
 
 ### Credit
 All software written by [Liam Ilan](https://liamilan.surge.sh)
