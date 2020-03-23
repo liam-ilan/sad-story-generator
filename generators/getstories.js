@@ -3,6 +3,8 @@ const Mongo = require('mongodb')
 const fs = require('fs')
 require('dotenv').config()
 
+const curseWords = require('./curses')
+
 // mongoDB
 const MongoClient = Mongo.MongoClient
 const mongoURI = process.env.MONGODB_URI
@@ -60,6 +62,13 @@ MongoClient.connect(mongoURI, mongoOptions, (err, client) => {
       if (res.substr(res.length - 1) !== '.') { res += '.' }
 
       return res
+    }).filter((story) => {
+      let res = false
+      curseWords.forEach((word) => {
+        res = res || story.split(' ').includes(word)
+      })
+
+      return !res
     }))
 
     // write to file data
