@@ -11,15 +11,19 @@ Note that this is not only limited to "sad stories". That comes from my group, a
 ### How To
 
 #### Getting Started
-- Clone this repo: `git clone https://github.com/liam-ilan/sad-story-generator.git`
-- Init NPM: `npm init`
-- Make a .env file, and add a `MONGODB_URI`
+- Clone this repo, `git clone https://github.com/liam-ilan/sad-story-generator.git`.
+- Init NPM, `npm init`.
+- Make a .env file, and add a `MONGODB_URI`.
 
 #### Server
-- To start the server, run: `npm start`. This will host the site on localhost:3000.
+- To start the server, `npm start`. This will host the site on port 3000.
 
 #### Development
-- For linting, run: `npm run lint`
+- For linting, `npm run lint`.
+- To start development server, `npm run dev`.
+
+### Deployment
+- Make sure to run `npm run build` before deployment.
 
 #### Generation
 - Run `node /generators/getstroies.js` to create a database dump used by the generators (data.json)

@@ -22,3 +22,5 @@ async function reqJson (url, method = 'GET', data = null) {
   const json = await res.json()
   return json
 }
+
+export default reqJson
