@@ -1,6 +1,6 @@
 /* global reqJson */
 
-const button = document.getElementById('button')
+const button = document.getElementById('generate')
 const outputBox = document.getElementById('output')
 const [...options] = document.getElementsByClassName('option')
 

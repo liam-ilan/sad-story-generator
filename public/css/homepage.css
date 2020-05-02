@@ -1,46 +1,15 @@
-body {
-  margin: 0;
-  background-color: #D7FFF1;
-  font-family: "Courier New", Courier, monospace;
-}
-
-a:hover {
-  color: #285943;
-}
-
-#title {
-  font-size: 50px;
-  text-align: center;
-  padding: 20px;
-  background-color: #285943;
-  color: white;
-}
-
-#links {
-  text-align: center;
-  font-size: 25px;
-  background-color: #77AF9C;
-  color: white;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-#links a {
-  color: white;
-}
-
-#about {
+#about-heading {
   text-align: center;
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-#text {
+#about {
   padding: 0px 100px;
   font-size: 25px;
 }
 
-#text a {
+#about a {
   color: black;
 }
 
