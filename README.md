@@ -4,6 +4,8 @@
 ### About
 A set of tools used to build a text generation. This includes a sever-side application, and interface to get text from the public, as well as the text generation software itself.
 
+All of this is hosted at https://sadstorygenerator.herokuapp.com/.
+
 Note that this is not only limited to "sad stories". That comes from my group, again.
 
 ### How To
