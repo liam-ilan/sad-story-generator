@@ -33,19 +33,13 @@ Note that this is not only limited to "sad stories". That comes from my group, a
 ### Samples
 
 #### *People Eating Veal In Lego City*
-```
-  honestly people still eat veal. he was doing his own thing until a man has fallen into the river in lego city. as there were no other ways to save him. but you made friends. just like me. then he died.
-```
+honestly people still eat veal. he was doing his own thing until a man has fallen into the river in lego city. as there were no other ways to save him. but you made friends. just like me. then he died.
 
 #### *The Dog Giving Vibes*
-```
-  mike was alone living with no friends. he notices the dog. but worse. but the dog gave vibes from the situation it found itself in. i am working at mcdonalds.
-```
+mike was alone living with no friends. he notices the dog. but worse. but the dog gave vibes from the situation it found itself in. i am working at mcdonalds.
 
 #### *A Man Fell Into the River*
-```
-  now a man has fallen into the river. now a man screamed.
-```
+now a man has fallen into the river. now a man screamed.
 
 ### Credit
 All software written by [Liam Ilan](https://liamilan.com)
