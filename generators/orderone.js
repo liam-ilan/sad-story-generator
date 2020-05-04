@@ -57,8 +57,17 @@ function generateStory (word = '.', sentenceCount = 5) {
 
 // export
 if (require.main === module) {
-  const story = generateStory()
+  let story = generateStory()
+  story = story[story.length - 1] === ' ' ? story.slice(0, -1) : story
+  story = story.split('. ').map(item => `${item[0].toUpperCase()}${item.slice(1)}`).join('. ')
+
   console.log(story)
 } else {
-  module.exports = generateStory
+  module.exports = () => {
+    let story = generateStory()
+    story = story[story.length - 1] === ' ' ? story.slice(0, -1) : story
+    story = story.split('. ').map(item => `${item[0].toUpperCase()}${item.slice(1)}`).join('. ')
+
+    return story
+  }
 }

@@ -1,5 +1,6 @@
 {
   "watch": [
-    "app.js"
+    "app.js",
+    "generators"
   ]
 }

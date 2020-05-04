@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src app.js --fix",
+    "lint": "npx eslint src app.js generators --fix",
     "start": "node generators/getstories.js && node app.js",
     "dev": "node generators/getstories.js & npx nodemon app.js & npx webpack --mode=development --watch",
     "build": "npx webpack --mode=production"
