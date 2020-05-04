@@ -5,7 +5,7 @@
 
 #options {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .option {
@@ -14,11 +14,11 @@
 }
 
 .option:hover {
-  color: #77AF9C;
+  color: #A82323;
 }
 
 .active {
-  color: #77AF9C
+  color: #E84847
 }
 
 .passive {
@@ -27,8 +27,4 @@
 
 #generate {
   width: 110px;
-}
-
-#generate:hover {
-  background-color: #77AF9C;
 }

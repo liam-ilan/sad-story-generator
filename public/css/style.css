@@ -1,7 +1,12 @@
+@font-face {
+  font-family: newzelek;
+  src: url(../fonts/newzelek.ttf);
+}
+
 body {
   margin: 0;
-  background-color: #D7FFF1;
-  font-family: "Courier New", Courier, monospace;
+  background-color: #EEE;
+  font-family: monospace;
 }
 
 .button {
@@ -10,21 +15,25 @@ body {
   text-align: center;
   margin-bottom: 10px;
   font-size: 20px;
-  background-color: #285943;
+  background-color: #E84847;
   color: white;
   border-radius: 10px;
   padding: 2px;
 }
 
+.button:hover {
+  background-color: #A82323;
+}
+
 .text-box {
-  font-family: "Courier New", Courier, monospace;
+  font-family: monospace;
   display: block;
   resize: none;
   margin: 10px auto;
   font-size: 30px;
-  border: 10px solid #285943;
+  border: 10px solid #E84847;
   padding: 5px;
-  background-color: #AAFCB8;
+  background-color: #EEE;
   overflow: scroll;
 }
 
@@ -32,23 +41,24 @@ body {
   font-size: 50px;
   text-align: center;
   padding: 20px;
-  background-color: #285943;
+  background-color: #040F0F;
   color: white;
+  font-family: newzelek;
 }
 
 #links {
   text-align: center;
   font-size: 25px;
-  background-color: #77AF9C;
-  color: white;
+  background-color: #E3E3E3;
+  color: black;
   margin-bottom: 20px;
   padding: 20px;
 }
 
 #links a {
-  color: white;
+  color: black;
 }
 
 #links a:hover {
-  color: #285943;
+  color: #A82323;
 }

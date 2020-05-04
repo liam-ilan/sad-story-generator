@@ -1,1 +1,113 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=3)}([function(e,t,n){"use strict";t.a=async function(e,t="GET",n=null){const r={method:t,headers:{"Content-Type":"application/json; charset=utf-8"}};n&&(r.body=JSON.stringify(n));const o=await fetch(e,r);return await o.json()}},,,function(e,t,n){"use strict";n.r(t);var r=n(0);const o=document.getElementById("submit"),u=document.getElementById("text"),i=document.getElementById("name");o.addEventListener("click",(async function(){const e={text:u.value,name:i.value};await Object(r.a)("/api/upload","POST",e),o.innerHTML="Submitted",setTimeout(()=>{o.innerHTML="Submit"},3e3),u.value=""}))}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/submit.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/reqjson.js":
+/*!************************!*\
+  !*** ./src/reqjson.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-unused-vars */\n\n// requests a json file, and returns\nasync function reqJson (url, method = 'GET', data = null) {\n  // set fetch options\n  const options = {\n    method: method,\n    headers: {\n      'Content-Type': 'application/json; charset=utf-8'\n    }\n  }\n\n  // add body if content exists\n  if (data) {\n    options.body = JSON.stringify(data)\n  }\n\n  // await the fetch from the url\n  const res = await fetch(url, options)\n\n  // await until the json promise is resolved\n  const json = await res.json()\n  return json\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (reqJson);\n\n\n//# sourceURL=webpack:///./src/reqjson.js?");
+
+/***/ }),
+
+/***/ "./src/submit.js":
+/*!***********************!*\
+  !*** ./src/submit.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reqjson_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reqjson.js */ \"./src/reqjson.js\");\n\n\n// elements\nconst submit = document.getElementById('submit')\nconst text = document.getElementById('text')\nconst name = document.getElementById('name')\n\n// event listener\nsubmit.addEventListener('click', async function () {\n  // prep data\n  const data = {\n    text: text.value,\n    name: name.value\n  }\n\n  // request\n  await Object(_reqjson_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('/api/upload', 'POST', data)\n\n  // tell user the text was received\n  submit.innerHTML = 'Submitted'\n  setTimeout(() => { submit.innerHTML = 'Submit' }, 3000)\n\n  // clear text\n  text.value = ''\n})\n\n\n//# sourceURL=webpack:///./src/submit.js?");
+
+/***/ })
+
+/******/ });
