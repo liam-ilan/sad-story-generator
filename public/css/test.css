@@ -1,3 +1,7 @@
+iframe {
+  border: 10px solid #E84847;
+}
+
 #container {
   text-align: center;
 }
