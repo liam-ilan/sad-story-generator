@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/submit.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/test.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/reqjson.js":
-/*!************************!*\
-  !*** ./src/reqjson.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/test.js":
+/*!*********************!*\
+  !*** ./src/test.js ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-unused-vars */\n\n// requests a json file, and returns\nasync function reqJson (url, method = 'GET', data = null) {\n  // set fetch options\n  const options = {\n    method: method,\n    headers: {\n      'Content-Type': 'application/json; charset=utf-8'\n    }\n  }\n\n  // add body if content exists\n  if (data) {\n    options.body = JSON.stringify(data)\n  }\n\n  // await the fetch from the url\n  const res = await fetch(url, options)\n\n  // await until the json promise is resolved\n  const json = await res.json()\n  return json\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (reqJson);\n\n\n//# sourceURL=webpack:///./src/reqjson.js?");
-
-/***/ }),
-
-/***/ "./src/submit.js":
-/*!***********************!*\
-  !*** ./src/submit.js ***!
-  \***********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reqjson_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reqjson.js */ \"./src/reqjson.js\");\n\n\n// elements\nconst submit = document.getElementById('submit')\nconst text = document.getElementById('text')\nconst name = document.getElementById('name')\n\n// event listener\nsubmit.addEventListener('click', async function () {\n  // prep data\n  const data = {\n    text: text.value,\n    name: name.value\n  }\n\n  // request\n  await Object(_reqjson_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('/api/upload', 'POST', data)\n\n  // tell user the text was received\n  submit.innerHTML = 'Submitted'\n  setTimeout(() => { submit.innerHTML = 'Submit' }, 3000)\n\n  // clear text\n  text.value = ''\n})\n\n\n//# sourceURL=webpack:///./src/submit.js?");
+eval("\n\n//# sourceURL=webpack:///./src/test.js?");
 
 /***/ })
 

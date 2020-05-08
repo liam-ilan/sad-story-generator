@@ -4,7 +4,8 @@ module.exports = {
   entry: {
     generate: './src/generate.js',
     homepage: './src/homepage.js',
-    submit: './src/submit.js'
+    submit: './src/submit.js',
+    test: './src/test.js',
   },
   output: {
     filename: '[name].js',
